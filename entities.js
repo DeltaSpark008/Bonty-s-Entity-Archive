@@ -90,7 +90,7 @@ const ENTITIES = [
     id: "vetala", name: "Vetala", volume: 1,
     culture: "Indian Subcontinent", category: "Spirit Lore", type: "Corpse-Possessing Spirit",
     sigil: "skull",
-    image: "Vetala.jpg",
+    image: "Vetal.jpg",
     record: "A Vetala is a knowing, mocking spirit of Hindu tradition that animates the dead rather than appearing as one — most famous from the story cycle in which King Vikramaditya carries one, again and again, on his back.",
     lore: "Vetalas are described dwelling in charnel grounds and possessing corpses at will, using the reanimated body only as a vehicle rather than a true resurrection. Their defining trait in the literature is knowledge rather than violence: in the Baital Pachisi (“Twenty-Five Tales of the Vetala”), the spirit tells King Vikramaditya a puzzle-story each time it is carried, then poses a riddle the king is bound by his own honesty to answer — resetting the chase every time he does.",
     appearance: "Inhabiting a corpse rather than having a fixed body of its own, a Vetala is typically described hanging upside-down, bat-like, from a tree in the charnel ground until disturbed, its borrowed body cold, discoloured, and unnaturally animated.",
