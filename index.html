@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonty's Entity Archive</title>
+<meta name="description" content="Bonty's Entity Archive — an illustrated compendium of myth, folklore, and the unexplained.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============================================================
+       THE BOOK
+       #book carries the .is-open state class (added on clasp click).
+       Everything else keys off that one class.
+       ============================================================ -->
+  <div id="book-stage">
+    <div id="book" class="book">
+
+      <!-- Interior: persistent chrome (nav) + the page that changes -->
+      <div id="book-pages" class="book-pages">
+
+        <header id="archive-nav" class="archive-nav">
+          <button class="archive-nav__brand" type="button" data-action="go-toc">
+            <span class="archive-nav__brand-mark">&#10022;</span>
+            <span class="archive-nav__brand-text">Bonty's Entity Archive</span>
+          </button>
+
+          <nav class="volume-tabs" id="volume-tabs" aria-label="Volumes of the archive">
+            <!-- populated by script.js -->
+          </nav>
+
+          <button class="archive-nav__close" type="button" data-action="close-book">
+            Close Cover
+          </button>
+        </header>
+
+        <main id="page-viewport" class="page-viewport">
+          <!-- populated by script.js: table of contents or an entity record -->
+        </main>
+
+      </div>
+
+      <!-- Front cover: sits on top, rotates open on click -->
+      <div id="book-cover" class="book-cover">
+        <div class="cover-face">
+
+          <p class="cover-stamp cover-stamp--top">Archive No. 001 &middot; Personal Research Edition</p>
+
+          <div class="cover-emblem" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="46" class="cover-emblem__ring"></circle>
+              <circle cx="60" cy="60" r="38" class="cover-emblem__ring cover-emblem__ring--inner"></circle>
+              <path class="cover-emblem__mark" d="M60 30 L67 52 L90 52 L71 66 L78 90 L60 75 L42 90 L49 66 L30 52 L53 52 Z"></path>
+            </svg>
+          </div>
+
+          <h1 class="cover-title">Bonty&rsquo;s<br>Entity<br>Archive</h1>
+          <p class="cover-subtitle">Folklore &middot; Lore &middot; Encounters &middot; Records</p>
+
+          <button id="clasp" class="clasp" type="button" aria-label="Undo the clasp and open the archive">
+            <span class="clasp-strap clasp-strap--top" aria-hidden="true"></span>
+            <span class="clasp-strap clasp-strap--bottom" aria-hidden="true"></span>
+            <span class="clasp-plate" aria-hidden="true">
+              <span class="clasp-plate__ring"></span>
+              <span class="clasp-plate__pin"></span>
+            </span>
+          </button>
+
+          <p class="cover-stamp cover-stamp--bottom">An Illustrated Compendium of Myth, Folklore &amp; the Unexplained</p>
+        </div>
+      </div>
+
+      <div class="book-spine" aria-hidden="true"></div>
+    </div>
+
+    <p class="book-hint" id="book-hint">Turn the clasp to open the archive</p>
+  </div>
+
+  <!-- ============================================================
+       SOUND TOGGLE — bottom right, works with no external audio file
+       ============================================================ -->
+  <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="false" aria-label="Play atmospheric sound">
+    <svg class="sound-icon sound-icon--off" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="sound-icon__speaker" d="M3.5 9.5v5h3.4l4.6 4V5.5l-4.6 4H3.5z"></path>
+      <path class="sound-icon__mark" d="M16 9l5 5M21 9l-5 5"></path>
+    </svg>
+    <svg class="sound-icon sound-icon--on" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="sound-icon__speaker" d="M3.5 9.5v5h3.4l4.6 4V5.5l-4.6 4H3.5z"></path>
+      <path class="sound-icon__mark" d="M15 8.7a4.7 4.7 0 0 1 0 6.6M17.8 6a8.7 8.7 0 0 1 0 12"></path>
+    </svg>
+  </button>
+
+</div>
+
+<noscript>
+  <p style="font-family: serif; text-align: center; padding: 3rem 1rem; color: #e8dcbb; background:#241209;">
+    Bonty's Entity Archive needs JavaScript enabled to open.
+  </p>
+</noscript>
+
+<script src="entities.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
